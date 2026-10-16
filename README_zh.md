@@ -1,13 +1,13 @@
 # EasyRight
 
-[English](README.md) | **中文** | [🚀 版本发布](https://github.com/LightDevCoder/EasyRight/releases)
+[English](README.md) | **中文** | [🚀 版本发布](https://github.com/light-cheng/EasyRight/releases)
 
 <p align="center">
   <img src="Resources/AppIcon.png" width="128" height="128" alt="EasyRight 图标" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/LightDevCoder/EasyRight/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/LightDevCoder/EasyRight/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI 状态" /></a>
+  <a href="https://github.com/light-cheng/EasyRight/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/light-cheng/EasyRight/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI 状态" /></a>
   <img src="https://img.shields.io/badge/macOS-13.0%2B-blue" alt="macOS 13.0+" />
   <img src="https://img.shields.io/badge/Swift-6.0-orange" alt="Swift 6.0" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License" />
@@ -98,10 +98,10 @@ flowchart LR
 
 | 格式 | 当前可下载制品 |
 | --- | --- |
-| DMG | [EasyRight-v0.1.0-macOS-Universal.dmg](https://github.com/LightDevCoder/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.dmg) |
-| ZIP | [EasyRight-v0.1.0-macOS-Universal.zip](https://github.com/LightDevCoder/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.zip) |
+| DMG | [EasyRight-v0.1.0-macOS-Universal.dmg](https://github.com/light-cheng/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.dmg) |
+| ZIP | [EasyRight-v0.1.0-macOS-Universal.zip](https://github.com/light-cheng/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.zip) |
 
-全部版本见 [GitHub Releases](https://github.com/LightDevCoder/EasyRight/releases)。
+全部版本见 [GitHub Releases](https://github.com/light-cheng/EasyRight/releases)。
 
 ### 更新与 Latest
 
@@ -113,9 +113,9 @@ flowchart LR
 Latest 固定入口：
 
 ```text
-https://github.com/LightDevCoder/EasyRight/releases/latest
-https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-Latest.dmg
-https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-Latest.zip
+https://github.com/light-cheng/EasyRight/releases/latest
+https://github.com/light-cheng/EasyRight/releases/latest/download/EasyRight-Latest.dmg
+https://github.com/light-cheng/EasyRight/releases/latest/download/EasyRight-Latest.zip
 ```
 
 > [!NOTE]
@@ -124,20 +124,30 @@ https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-La
 ### Homebrew Cask
 
 ```bash
-brew tap LightDevCoder/easyright https://github.com/LightDevCoder/EasyRight.git
-brew install --cask LightDevCoder/easyright/easyright
+brew tap light-cheng/easyright https://github.com/light-cheng/EasyRight.git
+brew install --cask light-cheng/easyright/easyright
 ```
+
+> [!IMPORTANT]
+> GitHub 账号 `LightDevCoder` 已更名为 `light-cheng`。如果之前 tap 过 `LightDevCoder/easyright`，请切换到新账号，避免以后从旧名称获取更新：
+>
+> ```bash
+> brew uninstall --cask LightDevCoder/easyright/easyright
+> brew untap LightDevCoder/easyright
+> brew tap light-cheng/easyright https://github.com/light-cheng/EasyRight.git
+> brew install --cask light-cheng/easyright/easyright
+> ```
 
 当前 Cask 固定到 v0.1.0 的不可变 URL，并校验真实 SHA-256。`brew upgrade` 只会在仓库中的 Cask 版本和哈希更新后升级，不会绕过版本元数据追随可变 Latest 文件。
 
 Homebrew 6.0 起，第三方 tap 必须经过显式信任。上面的完整限定名称只信任 `easyright` 这一项，不会扩大到整个 tap，也是新旧 Homebrew 均可使用的推荐安装方式。如果此前使用短名称安装并看到 `untrusted tap`，执行：
 
 ```bash
-brew trust --cask LightDevCoder/easyright/easyright
-brew install --cask LightDevCoder/easyright/easyright
+brew trust --cask light-cheng/easyright/easyright
+brew install --cask light-cheng/easyright/easyright
 ```
 
-`brew trust --cask` 仅适用于 Homebrew 6.0 及以上；无需使用权限范围更大的 `brew trust LightDevCoder/easyright`。
+`brew trust --cask` 仅适用于 Homebrew 6.0 及以上；无需使用权限范围更大的 `brew trust light-cheng/easyright`。
 
 > [!NOTE]
 > Homebrew 会校验下载包的 SHA-256 并安装 App，但不会为 App 补做 Developer ID 签名或 Apple 公证。首次打开时仍可能需要在“隐私与安全性”中手动允许。不建议使用 `--no-quarantine` 绕过这一次用户确认。
@@ -154,7 +164,7 @@ open "/Applications/EasyRight.app"
 
 ```bash
 brew update
-brew upgrade --cask LightDevCoder/easyright/easyright
+brew upgrade --cask light-cheng/easyright/easyright
 ```
 
 > [!NOTE]
@@ -162,21 +172,21 @@ brew upgrade --cask LightDevCoder/easyright/easyright
 >
 > ```bash
 > rm -rf "$(brew --caskroom)/easyright"
-> brew install --cask --force LightDevCoder/easyright/easyright
+> brew install --cask --force light-cheng/easyright/easyright
 > ```
 
 普通卸载会保留设置和运行数据，但会移除动态快捷服务并刷新系统菜单：
 
 ```bash
-brew uninstall --cask LightDevCoder/easyright/easyright
-brew untap LightDevCoder/easyright
+brew uninstall --cask light-cheng/easyright/easyright
+brew untap light-cheng/easyright
 ```
 
 需要同时删除设置、共享容器和失败动作数据时，使用完全卸载：
 
 ```bash
 brew uninstall --cask --zap easyright
-brew untap LightDevCoder/easyright
+brew untap light-cheng/easyright
 ```
 
 > [!WARNING]
@@ -185,8 +195,8 @@ brew untap LightDevCoder/easyright
 已克隆仓库时，也可以把当前目录作为本地 tap：
 
 ```bash
-brew tap LightDevCoder/easyright "$(pwd)"
-brew install --cask LightDevCoder/easyright/easyright
+brew tap light-cheng/easyright "$(pwd)"
+brew install --cask light-cheng/easyright/easyright
 ```
 
 ## 首次运行

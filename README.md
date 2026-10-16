@@ -1,13 +1,13 @@
 # EasyRight
 
-**English** | [中文](README_zh.md) | [🚀 Releases](https://github.com/LightDevCoder/EasyRight/releases)
+**English** | [中文](README_zh.md) | [🚀 Releases](https://github.com/light-cheng/EasyRight/releases)
 
 <p align="center">
   <img src="Resources/AppIcon.png" width="128" height="128" alt="EasyRight icon" />
 </p>
 
 <p align="center">
-  <a href="https://github.com/LightDevCoder/EasyRight/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/LightDevCoder/EasyRight/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
+  <a href="https://github.com/light-cheng/EasyRight/actions/workflows/ci.yml?query=branch%3Amain"><img src="https://github.com/light-cheng/EasyRight/actions/workflows/ci.yml/badge.svg?branch=main" alt="CI status" /></a>
   <img src="https://img.shields.io/badge/macOS-13.0%2B-blue" alt="macOS 13.0+" />
   <img src="https://img.shields.io/badge/Swift-6.0-orange" alt="Swift 6.0" />
   <img src="https://img.shields.io/badge/license-MIT-green" alt="MIT License" />
@@ -98,10 +98,10 @@ The code, GitHub Release, and Homebrew Cask are all at the **v0.1.0 community bu
 
 | Format | Current downloadable artifact |
 | --- | --- |
-| DMG | [EasyRight-v0.1.0-macOS-Universal.dmg](https://github.com/LightDevCoder/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.dmg) |
-| ZIP | [EasyRight-v0.1.0-macOS-Universal.zip](https://github.com/LightDevCoder/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.zip) |
+| DMG | [EasyRight-v0.1.0-macOS-Universal.dmg](https://github.com/light-cheng/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.dmg) |
+| ZIP | [EasyRight-v0.1.0-macOS-Universal.zip](https://github.com/light-cheng/EasyRight/releases/download/v0.1.0/EasyRight-v0.1.0-macOS-Universal.zip) |
 
-See [GitHub Releases](https://github.com/LightDevCoder/EasyRight/releases) for all versions.
+See [GitHub Releases](https://github.com/light-cheng/EasyRight/releases) for all versions.
 
 ### Updates And Latest
 
@@ -113,9 +113,9 @@ Every stable tag produces two asset classes:
 Stable Latest entry points:
 
 ```text
-https://github.com/LightDevCoder/EasyRight/releases/latest
-https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-Latest.dmg
-https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-Latest.zip
+https://github.com/light-cheng/EasyRight/releases/latest
+https://github.com/light-cheng/EasyRight/releases/latest/download/EasyRight-Latest.dmg
+https://github.com/light-cheng/EasyRight/releases/latest/download/EasyRight-Latest.zip
 ```
 
 > [!NOTE]
@@ -124,20 +124,30 @@ https://github.com/LightDevCoder/EasyRight/releases/latest/download/EasyRight-La
 ### Homebrew Cask
 
 ```bash
-brew tap LightDevCoder/easyright https://github.com/LightDevCoder/EasyRight.git
-brew install --cask LightDevCoder/easyright/easyright
+brew tap light-cheng/easyright https://github.com/light-cheng/EasyRight.git
+brew install --cask light-cheng/easyright/easyright
 ```
+
+> [!IMPORTANT]
+> The GitHub account `LightDevCoder` is now `light-cheng`. If you tapped `LightDevCoder/easyright` earlier, switch the tap to the new owner so updates never come from the old name:
+>
+> ```bash
+> brew uninstall --cask LightDevCoder/easyright/easyright
+> brew untap LightDevCoder/easyright
+> brew tap light-cheng/easyright https://github.com/light-cheng/EasyRight.git
+> brew install --cask light-cheng/easyright/easyright
+> ```
 
 The current Cask is pinned to an immutable v0.1.0 URL with a real SHA-256. `brew upgrade` advances only after this repository updates the Cask version and checksum; it does not bypass version metadata by following a mutable Latest file.
 
 Starting with Homebrew 6.0, third-party taps require explicit trust. The fully qualified name above trusts only the `easyright` Cask, not the entire tap, and is the recommended command across old and new Homebrew versions. If a previous short-name install reported an `untrusted tap`, run:
 
 ```bash
-brew trust --cask LightDevCoder/easyright/easyright
-brew install --cask LightDevCoder/easyright/easyright
+brew trust --cask light-cheng/easyright/easyright
+brew install --cask light-cheng/easyright/easyright
 ```
 
-`brew trust --cask` is available only in Homebrew 6.0 and later. There is no need to grant the broader `brew trust LightDevCoder/easyright` permission.
+`brew trust --cask` is available only in Homebrew 6.0 and later. There is no need to grant the broader `brew trust light-cheng/easyright` permission.
 
 > [!NOTE]
 > Homebrew verifies the download SHA-256 and installs the app, but it cannot add a Developer ID signature or Apple notarization. The first launch may still require manual approval in Privacy & Security. Using `--no-quarantine` to bypass that user confirmation is not recommended.
@@ -154,7 +164,7 @@ open "/Applications/EasyRight.app"
 
 ```bash
 brew update
-brew upgrade --cask LightDevCoder/easyright/easyright
+brew upgrade --cask light-cheng/easyright/easyright
 ```
 
 > [!NOTE]
@@ -162,21 +172,21 @@ brew upgrade --cask LightDevCoder/easyright/easyright
 >
 > ```bash
 > rm -rf "$(brew --caskroom)/easyright"
-> brew install --cask --force LightDevCoder/easyright/easyright
+> brew install --cask --force light-cheng/easyright/easyright
 > ```
 
 A normal uninstall keeps settings and runtime data, while removing dynamic quick services and refreshing the system menu:
 
 ```bash
-brew uninstall --cask LightDevCoder/easyright/easyright
-brew untap LightDevCoder/easyright
+brew uninstall --cask light-cheng/easyright/easyright
+brew untap light-cheng/easyright
 ```
 
 To also remove settings, shared containers, and failed-action data, perform a full uninstall:
 
 ```bash
 brew uninstall --cask --zap easyright
-brew untap LightDevCoder/easyright
+brew untap light-cheng/easyright
 ```
 
 > [!WARNING]
@@ -185,8 +195,8 @@ brew untap LightDevCoder/easyright
 For a local checkout, the current directory can be used as a local tap:
 
 ```bash
-brew tap LightDevCoder/easyright "$(pwd)"
-brew install --cask LightDevCoder/easyright/easyright
+brew tap light-cheng/easyright "$(pwd)"
+brew install --cask light-cheng/easyright/easyright
 ```
 
 ## First Run
