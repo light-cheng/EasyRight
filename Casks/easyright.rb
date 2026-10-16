@@ -2,10 +2,10 @@ cask "easyright" do
   version "0.1.1"
   sha256 "1076120a750a9e98cbf6b998c911cc3a591ef9e8e52fb64da807b06fc3ac19ca"
 
-  url "https://github.com/LightDevCoder/EasyRight/releases/download/v#{version}/EasyRight-v#{version}-macOS-Universal.dmg"
+  url "https://github.com/light-cheng/EasyRight/releases/download/v#{version}/EasyRight-v#{version}-macOS-Universal.dmg"
   name "EasyRight"
   desc "Finder right-click context menu assistant"
-  homepage "https://github.com/LightDevCoder/EasyRight"
+  homepage "https://github.com/light-cheng/EasyRight"
 
   livecheck do
     url :url
@@ -49,7 +49,7 @@ cask "easyright" do
     uninstall script saved by that old Cask. Run this one-time recovery:
 
       rm -rf "$(brew --caskroom)/easyright"
-      brew install --cask --force LightDevCoder/easyright/easyright
+      brew install --cask --force light-cheng/easyright/easyright
 
     This clears only the stale Homebrew receipt. App settings are preserved.
   EOS
